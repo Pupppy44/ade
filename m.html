@@ -1,0 +1,106 @@
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="/i.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+    * {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-image: url("/bg")
+    }
+
+    .card {
+      border-radius: 10px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+
+      -webkit-backdrop-filter: blur(15px);
+      backdrop-filter: blur(15px);
+      background: transparent;
+
+      width: 300px;
+      height: 100px;
+
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
+
+    .fa-lock {
+      background: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h2 {
+      background: linear-gradient(315deg, #f3f4f7 0%, #caccd1 74%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+    }
+
+    #mfa-code {
+      border-radius: 5px;
+      border: none;
+      width: 200px;
+      height: 40px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+
+      -webkit-backdrop-filter: blur(25px);
+      backdrop-filter: blur(25px);
+      background: transparent;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    button {
+      border-radius: 5px;
+      border: none;
+      width: 175px;
+      height: 40px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+
+      -webkit-backdrop-filter: blur(25px);
+      backdrop-filter: blur(25px);
+      background: transparent;
+      text-align: center;
+      font-size: 20px;
+
+      background: linear-gradient(315deg, #f3f4f7 0%, #caccd1 74%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+    }
+
+    label {
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
+  </style>
+</head>
+
+<body style="text-align: center;">
+  <div class="card">
+    <label>This website is in maintenance.</label>
+  </div>
+</body>
+<script>
+  new WebSocket("wss://vm.kirb.xyz/maintenance").onmessage = function (e) {
+    location.reload();
+  };
+</script>
+
+</html>

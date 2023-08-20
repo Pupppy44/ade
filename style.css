@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-image: url("/bg");
+  color: black;
+}
+
+.card {
+  border-radius: 10px;
+  height: 600px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background: transparent;
+
+  width: 450px;
+
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+.progress {
+  border-radius: 10px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background: transparent;
+
+  width: 300px;
+
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+
+  z-index: 55;
+}
+
+.message-text {
+  overflow-wrap: break-word;
+  hyphens: auto;
+
+  padding: 25px
+}
+
+.fa-comment {
+  color: #ffc042;
+}
+
+.fa-check-circle {
+  color: #41d167;
+}
+
+.fa-spin {
+  color: lightskyblue
+}
+
+
+h2 {
+  background: linear-gradient(315deg, #f3f4f7 0%, #caccd1 74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+input {
+  border-radius: 5px;
+  border: none;
+  width: 200px;
+  height: 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(1px);
+  background: rgba(255,255,255,0.2);
+  text-align: center;
+  font-size: 17px;
+}
+
+button {
+  border-radius: 5px;
+  border: none;
+  width: 175px;
+  height: 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+
+
+  background: rgba(255,255,255,0.2);
+  text-align: center;
+  font-weight: bolder;
+  font-size: 18px;
+
+  color: black;
+
+  transition: .35s;
+}
+
+button:hover {
+  background: rgba(255,255,255,.01);
+  opacity: 1;
+  cursor: pointer;
+}
+
+#status {
+  visibility: hidden;
+}
